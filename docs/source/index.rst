@@ -1,13 +1,10 @@
-Welcome to Lumache's documentation!
+Welcome to Kaboom's documentation!
 ===================================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
+# What is Kaboom?
+Kaboom is a service for tracking comics and cartoons, with an API to retrieve and add data. As of right now, Kaboom is just a backend, and the [website]() does not provide a frontend to interface with the service *yet*. This is why Kaboom needs frontend clients, for users to access the service.
 
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
+Before starting, please read the [developer guidlines]().
 
 .. note::
 
