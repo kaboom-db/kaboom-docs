@@ -9,7 +9,7 @@ Logging in to Kaboom is fairly simple. You first need to ensure that the user ha
 .. _creating-an-account:
 
 Creating an account
-=====
+-----
 
 In order to allow users to create an account, you need to send a `POST` request to the signup endpoint:
 
