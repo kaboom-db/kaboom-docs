@@ -21,6 +21,6 @@ You also need to send the users credentials as part of the JSON body, like this:
 
 {
     "username": "testUser",
-    "password": "Qwe213d", // This is not a real password or account lol
+    "password": "Qwe213d",
     "email": "email@kaboom.com"
 }
