@@ -71,7 +71,7 @@ Note that the user's email is not needed when logging in. A valid request will r
         "image": "https://www.gravatar.com/avatar/910779446a7b713a28907668cafd9611?default=retro"
     }
 
-Uer profile images are not stored in the Kaboom database, and is instead taken from Gravatar based on the user email.
+User profile images are not stored in the Kaboom database, and is instead taken from Gravatar based on the user email.
 
 After retrieving the JSON, make sure to `securely` store the token, this will be used in the Authorization header for requests that need authentication (see below).
 
