@@ -64,7 +64,7 @@ Note that the user's email is not needed when logging in. A valid request will r
 .. code-block:: JSON
 
     {
-        "token": "aabbccggeeffgghhiijjkkllmmnnooppqqrrsstt,
+        "token": "aabbccggeeffgghhiijjkkllmmnnooppqqrrsstt",
         "username": "testUser",
         "user_id": 4,
         "email": "email@kaboom.com",
