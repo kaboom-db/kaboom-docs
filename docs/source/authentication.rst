@@ -17,10 +17,10 @@ In order to allow users to create an account, you need to send a `POST` request 
 
 You also need to send the users credentials as part of the JSON body, like this:
 
-.. code-block:: json
+.. code-block:: JSON
 
-{
-    "username": "testUser",
-    "password": "Qwe213d",
-    "email": "email@kaboom.com"
-}
+    {
+        "username": "testUser",
+        "password": "Qwe213d",
+        "email": "email@kaboom.com"
+    }
