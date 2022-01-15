@@ -6,7 +6,7 @@ and `cartoons` endpoint require a user to be logged in, and so do ALL requests s
 
 Logging in to Kaboom is fairly simple. You first need to ensure that the user has an account on Kaboom.
 
-.. _creating an account:
+.. _creating-an-account:
 
 Creating an account
 =====
