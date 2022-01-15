@@ -80,6 +80,4 @@ After retrieving the JSON, make sure to `securely` store the token, this will be
 Auth requests
 -----
 
-Requests that need authentication (a user to be logged in) must have the user token in the Authorization header, in this format:
-
-<Authorization: Token {token}>
+Requests that need authentication (a user to be logged in) must have the user token in the Authorization header, in this format: <Authorization: Token {token}>
