@@ -8,12 +8,12 @@ Before starting, please read the `Developer Guidlines <http://www.python.org/>`_
 
 .. note::
 
-   This project is under active development.
+   This project is under active development and is not in a usable state.
 
 Contents
 --------
 
 .. toctree::
 
-   usage
+   authentication
    api
