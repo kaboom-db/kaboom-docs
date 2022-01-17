@@ -8,6 +8,17 @@ Kaboom is a service for tracking comics and cartoons, with an API to retrieve an
 
 Before starting, please read the `Developer Guidlines <http://www.python.org/>`_.
 
+.. _developer-notes:
+
+Developer Notes
+-----
+
+While testing your client, please make sure to only use the staging server, located here: https://staging-kaboom.herokuapp.com/v1
+
+You can also download the Postman collection here, which is pre-configured with the staging url and a demo user access token: https://github.com/crxssed7/kaboom-api/blob/master/KABOOM.postman_collection.json
+
+Any data uploaded to the staging database does not persist and will be refreshed frequently.
+
 .. note::
 
    This project is under active development and is not in a usable state.
