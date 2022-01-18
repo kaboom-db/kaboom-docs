@@ -17,6 +17,8 @@ While testing your client, please make sure to only use the staging server, loca
 
 You can also download the Postman collection here, which is pre-configured with the staging url and a demo user access token: https://github.com/crxssed7/kaboom-api/blob/master/KABOOM.postman_collection.json
 
+All **POST** and **PATCH** requests must be sent with a trailing / at the end of the URL.
+
 Any data uploaded to the staging database does not persist and will be refreshed frequently.
 
 .. note::
