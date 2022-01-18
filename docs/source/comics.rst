@@ -147,6 +147,68 @@ Response:
       "date_created": "2022-01-17T19:25:05.609164Z"
    }
 
+Update specific comic series 🔒
+#####
+
+**PATCH** https://staging-kaboom.herokuapp.com/v1/comics/series/{comic_id}/
+
+Headers: 
+
++---------------+-------------------------+------------+
+| Name          | Value                   | Required   |
++===============+=========================+============+
+| Authorization | Token user_access_token | yes        |
++---------------+-------------------------+------------+
+
+JSON Body:
+
++---------------+------------+
+| Name          | Required   |
++===============+============+
+| series_name   | no         |
++---------------+------------+
+| publisher_id  | no         |
++---------------+------------+
+| year_started  | no         |
++---------------+------------+
+| status        | no         |
++---------------+------------+
+| summary       | no         |
++---------------+------------+
+
+.. code-block::
+
+   {
+      "series_name": "The NEW Amazing Comic",
+      "publisher_id": 1,
+      "summary": "The Amazing Comic, but NEW",
+      "rating": 10,
+      "year_started": 2017
+   }
+
+Response:
+
+.. code-block:: JSON
+
+   {
+      "id": 2,
+      "publisher": {
+         "id": 1,
+         "name": "Oni Press",
+         "logo": "",
+         "website": "https://onipress.com",
+         "date_created": "2022-01-17T19:14:42.131974Z"
+      },
+      "series_name": "The NEW Amazing Comic",
+      "summary": "The Amazing Comic, but NEW",
+      "year_started": 2017,
+      "status": "PLANNED",
+      "cover_image": "",
+      "background_image": "",
+      "rating": null,
+      "date_created": "2022-01-18T19:05:52.109969Z"
+   }
+
 .. autosummary::
    :toctree: generated
 
