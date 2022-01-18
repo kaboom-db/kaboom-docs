@@ -1,6 +1,8 @@
 Comics
 =====
 
+All endpoints marked with 🔒 require a user to be logged in.
+
 .. comic-series:
 
 Comic Series
@@ -25,7 +27,7 @@ Query params:
 | publisher  | oni press  | int        | no        |
 +------------+------------+------------+-----------+
 
-This will return an object like this:
+Response:
 
 .. code-block:: JSON
 
@@ -53,6 +55,54 @@ This will return an object like this:
             "date_created": "2022-01-17T19:25:05.609164Z"
          }
       ]
+   }
+
+Add comic series 🔒
+#####
+
+**POST** base_url/v1/comics/series/
+
+Headers: 
+
++---------------+-------------------------+------------+
+| Name          | Value                   | Required   |
++===============+=========================+============+
+| Authorization | Token user_access_token | yes        |
++---------------+-------------------------+------------+
+
+JSON Body:
+
+.. code-block:: JSON
+
+   {
+      "series_name": "The Amazing Comic", // REQUIRED
+      "publisher_id": 1,
+      "year_started": 2023, // REQUIRED
+      "status": "PLANNED", // REQUIRED
+      "summary": "An amazing comic series"
+   }
+
+Response:
+
+.. code-block:: JSON
+
+   {
+      "id": 2,
+      "publisher": {
+         "id": 1,
+         "name": "Oni Press",
+         "logo": "",
+         "website": "https://onipress.com",
+         "date_created": "2022-01-17T19:14:42.131974Z"
+      },
+      "series_name": "The Amazing Comic",
+      "summary": "An amazing comic series",
+      "year_started": 2023,
+      "status": "PLANNED",
+      "cover_image": "",
+      "background_image": "",
+      "rating": null,
+      "date_created": "2022-01-18T18:42:52.343615Z"
    }
 
 .. autosummary::
