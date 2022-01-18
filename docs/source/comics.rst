@@ -119,6 +119,34 @@ Response:
       "date_created": "2022-01-18T18:42:52.343615Z"
    }
 
+Get specific comic series
+#####
+
+**GET** https://staging-kaboom.herokuapp.com/v1/comics/series/1/
+
+Response:
+
+.. code-block:: JSON
+
+   {
+      "id": 1,
+      "publisher": {
+         "id": 1,
+         "name": "Oni Press",
+         "logo": "",
+         "website": "https://onipress.com",
+         "date_created": "2022-01-17T19:14:42.131974Z"
+      },
+      "series_name": "Rick and Morty: Pocket Like You Stole It",
+      "summary": "Five issue mini-series.",
+      "year_started": 2017,
+      "status": "COMPLETED",
+      "cover_image": "/media/RMPLYSI.jpg",
+      "background_image": "",
+      "rating": 6.0,
+      "date_created": "2022-01-17T19:25:05.609164Z"
+   }
+
 .. autosummary::
    :toctree: generated
 
