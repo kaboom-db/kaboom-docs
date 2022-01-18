@@ -176,7 +176,7 @@ JSON Body:
 | summary       | no         |
 +---------------+------------+
 
-.. code-block::
+.. code-block:: JSON
 
    {
       "series_name": "The NEW Amazing Comic",
