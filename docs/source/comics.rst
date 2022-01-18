@@ -72,13 +72,27 @@ Headers:
 
 JSON Body:
 
++---------------+------------+
+| Name          | Required   |
++===============+============+
+| series_name   | yes        |
++---------------+------------+
+| publisher_id  | no         |
++---------------+------------+
+| year_started  | yes        |
++---------------+------------+
+| status        | yes        |
++---------------+------------+
+| summary       | no         |
++---------------+------------+
+
 .. code-block:: JSON
 
    {
-      "series_name": "The Amazing Comic", // REQUIRED
+      "series_name": "The Amazing Comic",
       "publisher_id": 1,
-      "year_started": 2023, // REQUIRED
-      "status": "PLANNED", // REQUIRED
+      "year_started": 2023,
+      "status": "PLANNED",
       "summary": "An amazing comic series"
    }
 
