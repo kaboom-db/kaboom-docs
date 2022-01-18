@@ -13,7 +13,7 @@ Creating an account
 
 In order to allow users to create an account, you need to send a `POST` request to the signup endpoint:
 
-**POST** base_url/v1/accounts/signup/
+**POST** https://staging-kaboom.herokuapp.com/v1/accounts/signup/
 
 You also need to send the users credentials as part of the JSON body, like this:
 
@@ -48,7 +48,7 @@ this, each user has an access token that proves they are logged in instead of se
 
 To retrieve a users token, you need to send a `POST` request to the login endpoint:
 
-**POST** base_url/v1/accounts/login/
+**POST** https://staging-kaboom.herokuapp.com/v1/accounts/login/
 
 You also need to send the user credentials of course, as part of the request body:
 

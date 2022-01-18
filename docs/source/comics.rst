@@ -11,7 +11,7 @@ Comic Series
 Get comic series
 #####
 
-**GET** base_url/v1/comics/series/
+**GET** https://staging-kaboom.herokuapp.com/v1/comics/series/
 
 Query params:
 
@@ -60,7 +60,7 @@ Response:
 Add comic series 🔒
 #####
 
-**POST** base_url/v1/comics/series/
+**POST** https://staging-kaboom.herokuapp.com/v1/comics/series/
 
 Headers: 
 
