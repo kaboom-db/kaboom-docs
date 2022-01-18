@@ -122,7 +122,7 @@ Response:
 Get specific comic series
 #####
 
-**GET** https://staging-kaboom.herokuapp.com/v1/comics/series/1/
+**GET** https://staging-kaboom.herokuapp.com/v1/comics/series/{comic_id}/
 
 Response:
 
@@ -150,4 +150,4 @@ Response:
 .. autosummary::
    :toctree: generated
 
-   lumache
+   kaboom
