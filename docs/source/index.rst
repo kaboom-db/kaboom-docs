@@ -29,4 +29,4 @@ Contents
 .. toctree::
 
    authentication
-   api
+   comics
