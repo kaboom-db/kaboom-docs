@@ -299,6 +299,58 @@ Response:
       ]
    }
 
+Add comic issues 🔒
+#####
+
+**POST** https://staging-kaboom.herokuapp.com/v1/comics/issues/
+
+Headers: 
+
++---------------+-------------------------+------------+
+| Name          | Value                   | Required   |
++===============+=========================+============+
+| Authorization | Token user_access_token | yes        |
++---------------+-------------------------+------------+
+
+JSON Body:
+
++-----------------------+------------+
+| Name                  | Required   |
++=======================+============+
+| issue_number_absolute | yes        |
++-----------------------+------------+
+| issue_number *        | yes        |
++-----------------------+------------+
+| series_id             | yes        |
++-----------------------+------------+
+| summary               | no         |
++-----------------------+------------+
+| characters_id         | no         |
++-----------------------+------------+
+| staff_id              | no         |
++-----------------------+------------+
+| format_id             | no         |
++-----------------------+------------+
+| release_date          | no         |
++-----------------------+------------+
+
+.. code-block:: JSON
+
+   {
+      "issue_number_absolute": 10,
+      "issue_number": "4",
+      "series_id": 1,
+      "summary": "This is an issue",
+      "format_id": 1,
+      "characters_id": [
+        1
+      ],
+      "staff_id": [
+        1
+      ],
+      "release_date": "2022-01-19"
+   }
+
 .. autosummary::
    :toctree: generated
 
