@@ -5,10 +5,10 @@ All endpoints marked with 🔒 require a user to be logged in.
 
 .. comic-series:
 
-Comic Series
+Series
 -----
 
-Get comic series
+Get series
 #####
 
 **GET** https://staging-kaboom.herokuapp.com/v1/comics/series/
@@ -61,7 +61,7 @@ Response:
       ]
    }
 
-Add comic series 🔒
+Add series 🔒
 #####
 
 **POST** https://staging-kaboom.herokuapp.com/v1/comics/series/
@@ -123,7 +123,7 @@ Response:
       "date_created": "2022-01-18T18:42:52.343615Z"
    }
 
-Get specific comic series
+Get specific series
 #####
 
 **GET** https://staging-kaboom.herokuapp.com/v1/comics/series/{comic_id}/
@@ -151,7 +151,7 @@ Response:
       "date_created": "2022-01-17T19:25:05.609164Z"
    }
 
-Update specific comic series 🔒
+Update specific series 🔒
 #####
 
 **PATCH** https://staging-kaboom.herokuapp.com/v1/comics/series/{comic_id}/
@@ -215,10 +215,10 @@ Response:
 
 .. comic-issues:
 
-Comic Issues
+Issues
 -----
 
-Get comic issues
+Get issues
 #####
 
 **GET** https://staging-kaboom.herokuapp.com/v1/comics/issues/
@@ -299,7 +299,7 @@ Response:
       ]
    }
 
-Add comic issue 🔒
+Add issue 🔒
 #####
 
 **POST** https://staging-kaboom.herokuapp.com/v1/comics/issues/
