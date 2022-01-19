@@ -299,7 +299,7 @@ Response:
       ]
    }
 
-Add comic issues 🔒
+Add comic issue 🔒
 #####
 
 **POST** https://staging-kaboom.herokuapp.com/v1/comics/issues/
@@ -349,6 +349,68 @@ JSON Body:
         1
       ],
       "release_date": "2022-01-19"
+   }
+
+Response:
+
+.. code-block:: JSON
+
+   {
+      "id": 6,
+      "characters": [
+         {
+            "id": 1,
+            "name": "Rick Sanchez",
+            "alias": null,
+            "image": "",
+            "biography": "",
+            "date_created": "2022-01-17T19:13:47.631804Z"
+         }
+      ],
+      "staff": [
+         {
+            "id": 1,
+            "position": {
+               "id": 2,
+               "position": "Penciller"
+            },
+            "name": "Pencil Boy",
+            "image": "",
+            "date_of_birth": "1988-11-10",
+            "date_of_death": "2005-04-15",
+            "age": 16,
+            "biography": "Amazing penciller",
+            "date_created": "2022-01-19T19:17:57.541087Z"
+         }
+      ],
+      "series": {
+         "id": 1,
+         "publisher": {
+            "id": 1,
+            "name": "Oni Press",
+            "logo": "",
+            "website": "https://onipress.com",
+            "date_created": "2022-01-17T19:14:42.131974Z"
+         },
+         "series_name": "Rick and Morty: Pocket Like You Stole It",
+         "summary": "Five issue mini-series.",
+         "year_started": 2017,
+         "status": "COMPLETED",
+         "cover_image": "/media/RMPLYSI.jpg",
+         "background_image": "",
+         "rating": 6.0,
+         "date_created": "2022-01-17T19:25:05.609164Z"
+      },
+      "format": {
+         "id": 1,
+         "name": "Comic"
+      },
+      "issue_number_absolute": 10,
+      "issue_number": "4",
+      "summary": "This is an issue",
+      "release_date": "2022-01-19",
+      "cover_image": "",
+      "date_created": "2022-01-19T19:18:01.352640Z"
    }
 
 .. autosummary::
