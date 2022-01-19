@@ -334,6 +334,8 @@ JSON Body:
 | release_date          | no         |
 +-----------------------+------------+
 
+* issue_number is a string, so it can also be treated as the issue name.
+
 .. code-block:: JSON
 
    {
