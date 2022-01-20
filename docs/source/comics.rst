@@ -473,6 +473,133 @@ Response:
       "date_created": "2022-01-20T18:39:39.678729Z"
    }
 
+Update specific series 🔒
+#####
+
+**PATCH** https://staging-kaboom.herokuapp.com/v1/comics/issue/{comic_id}/
+
+Headers: 
+
++---------------+-------------------------+------------+
+| Name          | Value                   | Required   |
++===============+=========================+============+
+| Authorization | Token user_access_token | yes        |
++---------------+-------------------------+------------+
+
+JSON Body:
+
++-----------------------+------------+
+| Name                  | Required   |
++=======================+============+
+| summary               | no         |
++-----------------------+------------+
+| characters_id         | no         |
++-----------------------+------------+
+| staff_id              | no         |
++-----------------------+------------+
+| format_id             | no         |
++-----------------------+------------+
+| issue_number_absolute | no         |
++-----------------------+------------+
+| issue_number *        | no         |
++-----------------------+------------+
+| release_date          | no         |
++-----------------------+------------+
+
+.. code-block:: JSON
+
+   {
+      "summary": "I just added extra characters and staff",
+      "characters_id": [
+         1
+      ],
+      "staff_id": [
+         1
+      ],
+      "format_id": 1,
+      "issue_number_absolute": 2,
+      "issue_number": "2",
+      "release_date": "2021-01-01"
+   }
+
+Response:
+
+.. code-block:: JSON
+
+   {
+      "id": 1,
+      "characters": [
+         {
+            "id": 1,
+            "name": "Kingsman",
+            "alias": null,
+            "image": "",
+            "biography": "",
+            "date_created": "2022-01-13T20:16:17.610580Z"
+         },
+         {
+            "id": 2,
+            "name": "Test Character",
+            "alias": null,
+            "image": "",
+            "biography": "",
+            "date_created": "2022-01-20T18:39:30.220447Z"
+         }
+      ],
+      "staff": [
+         {
+            "id": 1,
+            "position": {
+               "id": 3,
+               "position": "Cover Artist"
+            },
+            "name": "Indiana Jones",
+            "image": "https://kaboomstaging.s3.amazonaws.com/AveAobC_LF9uyQV.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIASSCHIVMY544HUN6N%2F20220112%2Feu-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220112T192247Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=9ae96d9b721a4b90e87fb4777b77f4b30a7be1835372865b04f173958f54bc40",
+            "date_of_birth": null,
+            "date_of_death": null,
+            "age": null,
+            "biography": "",
+            "date_created": "2022-01-12T19:22:47.440930Z"
+         },
+         {
+            "id": 2,
+            "position": {
+               "id": 4,
+               "position": "Inker"
+            },
+            "name": "Test Staff",
+            "image": "",
+            "date_of_birth": null,
+            "date_of_death": null,
+            "age": null,
+            "biography": "",
+            "date_created": "2022-01-20T18:39:04.113810Z"
+         }
+      ],
+      "series": {
+         "id": 1,
+         "publisher": null,
+         "series_name": "Test Comic",
+         "summary": "",
+         "year_started": 2022,
+         "status": "COMPLETED",
+         "cover_image": "https://kaboomstaging.s3.amazonaws.com/AveAobC_LF9uyQV.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIASSCHIVMY544HUN6N%2F20220112%2Feu-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220112T190405Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=a3765515d11a125e9b1fb11d1e9ea5a79acaadbb7acf3a1e8a98ed87e7f69ba8",
+         "background_image": "https://kaboomstaging.s3.amazonaws.com/AveAobC_LF9uyQV.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIASSCHIVMY544HUN6N%2F20220112%2Feu-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220112T184616Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=5d26a7f9b7d69ce433cfea9dd120dd2dbbde38ebc9c94c45a217ec64feeb0f0e",
+         "rating": null,
+         "date_created": "2022-01-12T19:04:05.887338Z"
+      },
+      "format": {
+         "id": 1,
+         "name": "Comic"
+      },
+      "issue_number_absolute": 2,
+      "issue_number": "2",
+      "summary": "I just added extra characters and staff",
+      "release_date": "2021-01-01",
+      "cover_image": "",
+      "date_created": "2022-01-20T18:48:47.891063Z"
+   }
+
 .. autosummary::
    :toctree: generated
 
