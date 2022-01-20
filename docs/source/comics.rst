@@ -415,6 +415,64 @@ Response:
       "date_created": "2022-01-19T19:18:01.352640Z"
    }
 
+Get specific issue
+#####
+
+**GET** https://staging-kaboom.herokuapp.com/v1/comics/issues/{issue_id}/
+
+Response:
+
+.. code-block:: JSON
+
+   {
+      "id": 1,
+      "characters": [
+         {
+            "id": 2,
+            "name": "Test Character",
+            "alias": null,
+            "image": "",
+            "biography": "",
+            "date_created": "2022-01-20T18:39:30.220447Z"
+         }
+      ],
+      "staff": [
+         {
+            "id": 2,
+            "position": {
+               "id": 4,
+               "position": "Inker"
+            },
+            "name": "Test Staff",
+            "image": "",
+            "date_of_birth": null,
+            "date_of_death": null,
+            "age": null,
+            "biography": "",
+            "date_created": "2022-01-20T18:39:04.113810Z"
+         }
+      ],
+      "series": {
+         "id": 1,
+         "publisher": null,
+         "series_name": "Test Comic",
+         "summary": "",
+         "year_started": 2022,
+         "status": "COMPLETED",
+         "cover_image": "https://kaboomstaging.s3.amazonaws.com/AveAobC_LF9uyQV.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIASSCHIVMY544HUN6N%2F20220112%2Feu-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220112T190405Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=a3765515d11a125e9b1fb11d1e9ea5a79acaadbb7acf3a1e8a98ed87e7f69ba8",
+         "background_image": "https://kaboomstaging.s3.amazonaws.com/AveAobC_LF9uyQV.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIASSCHIVMY544HUN6N%2F20220112%2Feu-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220112T184616Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=5d26a7f9b7d69ce433cfea9dd120dd2dbbde38ebc9c94c45a217ec64feeb0f0e",
+         "rating": null,
+         "date_created": "2022-01-12T19:04:05.887338Z"
+      },
+      "format": null,
+      "issue_number_absolute": 1,
+      "issue_number": "1",
+      "summary": "",
+      "release_date": null,
+      "cover_image": "",
+      "date_created": "2022-01-20T18:39:39.678729Z"
+   }
+
 .. autosummary::
    :toctree: generated
 
