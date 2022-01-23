@@ -473,10 +473,10 @@ Response:
       "date_created": "2022-01-20T18:39:39.678729Z"
    }
 
-Update specific series 🔒
+Update specific issue 🔒
 #####
 
-**PATCH** https://staging-kaboom.herokuapp.com/v1/comics/issue/{comic_id}/
+**PATCH** https://staging-kaboom.herokuapp.com/v1/comics/issue/{issue_id}/
 
 Headers: 
 
@@ -598,6 +598,148 @@ Response:
       "release_date": "2021-01-01",
       "cover_image": "",
       "date_created": "2022-01-20T18:48:47.891063Z"
+   }
+
+.. comic-publishers:
+
+Publishers
+-----
+
+Get publishers
+#####
+
+**GET** https://staging-kaboom.herokuapp.com/v1/comics/publishers/
+
+Query params:
+
++------------+------------+------------+-----------+
+| Name       | Value      | Type       | Required  |
++============+============+============+===========+
+| query      | marvel     | str        | no        |
++------------+------------+------------+-----------+
+| page *     | 1          | int        | no        |
++------------+------------+------------+-----------+
+
+* pagination purposes
+
+Response:
+
+.. code-block:: JSON
+
+   {
+      "count": 1,
+      "next": null,
+      "previous": null,
+      "results": [
+         {
+            "id": 1,
+            "name": "Marvel Comics",
+            "logo": "",
+            "website": null,
+            "date_created": "2022-01-13T20:12:59.638024Z"
+         }
+      ]
+   }
+
+Add publisher 🔒
+#####
+
+**POST** https://staging-kaboom.herokuapp.com/v1/comics/publishers/
+
+Headers: 
+
++---------------+-------------------------+------------+
+| Name          | Value                   | Required   |
++===============+=========================+============+
+| Authorization | Token user_access_token | yes        |
++---------------+-------------------------+------------+
+
+JSON Body:
+
++-----------------------+------------+
+| Name                  | Required   |
++=======================+============+
+| name                  | yes        |
++-----------------------+------------+
+| website               | no         |
++-----------------------+------------+
+
+.. code-block:: JSON
+
+   {
+      "name": "Test Publisher",
+      "website": "http://test.com/"
+   }
+
+Response:
+
+.. code-block:: JSON
+
+   {
+      "id": 2,
+      "name": "Test Publisher",
+      "logo": "",
+      "website": "http://test.com/",
+      "date_created": "2022-01-23T14:31:16.915642Z"
+   }
+
+Get specific publisher
+#####
+
+**GET** https://staging-kaboom.herokuapp.com/v1/comics/publishers/{publisher_id}/
+
+Response:
+
+.. code-block:: JSON
+
+   {
+      "id": 2,
+      "name": "Test Publisher",
+      "logo": "",
+      "website": "http://test.com/",
+      "date_created": "2022-01-23T14:31:16.915642Z"
+   }
+
+Update specific publisher 🔒
+#####
+
+**PATCH** https://staging-kaboom.herokuapp.com/v1/comics/publishers/{publisher_id}/
+
+Headers: 
+
++---------------+-------------------------+------------+
+| Name          | Value                   | Required   |
++===============+=========================+============+
+| Authorization | Token user_access_token | yes        |
++---------------+-------------------------+------------+
+
+JSON Body:
+
++-----------------------+------------+
+| Name                  | Required   |
++=======================+============+
+| name                  | no         |
++-----------------------+------------+
+| website               | no         |
++-----------------------+------------+
+
+.. code-block:: JSON
+
+   {
+      "name": "Oni Press",
+      "website": "https://google.com/"
+   }
+
+Response:
+
+.. code-block:: JSON
+
+   {
+      "id": 2,
+      "name": "Oni Press",
+      "logo": "",
+      "website": "https://google.com/",
+      "date_created": "2022-01-23T14:38:27.574581Z"
    }
 
 .. autosummary::
