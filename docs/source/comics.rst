@@ -727,7 +727,7 @@ JSON Body:
 
    {
       "name": "Oni Press",
-      "website": "https://google.com/"
+      "website": "https://onipress.com/"
    }
 
 Response:
@@ -738,7 +738,7 @@ Response:
       "id": 2,
       "name": "Oni Press",
       "logo": "",
-      "website": "https://google.com/",
+      "website": "https://onipress.com/",
       "date_created": "2022-01-23T14:38:27.574581Z"
    }
 
