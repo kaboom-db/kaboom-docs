@@ -90,16 +90,6 @@ JSON Body:
 | summary       | no         |
 +---------------+------------+
 
-.. code-block:: JSON
-
-   {
-      "series_name": "The Amazing Comic",
-      "publisher_id": 1,
-      "year_started": 2023,
-      "status": "PLANNED",
-      "summary": "An amazing comic series"
-   }
-
 Response:
 
 .. code-block:: JSON
@@ -179,16 +169,6 @@ JSON Body:
 +---------------+------------+
 | summary       | no         |
 +---------------+------------+
-
-.. code-block:: JSON
-
-   {
-      "series_name": "The NEW Amazing Comic",
-      "publisher_id": 1,
-      "summary": "The Amazing Comic, but NEW",
-      "rating": 10,
-      "year_started": 2017
-   }
 
 Response:
 
@@ -335,23 +315,6 @@ JSON Body:
 +-----------------------+------------+
 
 * issue_number is a string, so it can also be treated as the issue name.
-
-.. code-block:: JSON
-
-   {
-      "issue_number_absolute": 10,
-      "issue_number": "4",
-      "series_id": 1,
-      "summary": "This is an issue",
-      "format_id": 1,
-      "characters_id": [
-        1
-      ],
-      "staff_id": [
-        1
-      ],
-      "release_date": "2022-01-19"
-   }
 
 Response:
 
@@ -506,22 +469,6 @@ JSON Body:
 | release_date          | no         |
 +-----------------------+------------+
 
-.. code-block:: JSON
-
-   {
-      "summary": "I just added extra characters and staff",
-      "characters_id": [
-         1
-      ],
-      "staff_id": [
-         1
-      ],
-      "format_id": 1,
-      "issue_number_absolute": 2,
-      "issue_number": "2",
-      "release_date": "2021-01-01"
-   }
-
 Response:
 
 .. code-block:: JSON
@@ -664,13 +611,6 @@ JSON Body:
 | website               | no         |
 +-----------------------+------------+
 
-.. code-block:: JSON
-
-   {
-      "name": "Test Publisher",
-      "website": "http://test.com/"
-   }
-
 Response:
 
 .. code-block:: JSON
@@ -722,13 +662,6 @@ JSON Body:
 +-----------------------+------------+
 | website               | no         |
 +-----------------------+------------+
-
-.. code-block:: JSON
-
-   {
-      "name": "Oni Press",
-      "website": "https://onipress.com/"
-   }
 
 Response:
 
@@ -831,14 +764,6 @@ JSON Body:
 | biography             | no         |
 +-----------------------+------------+
 
-.. code-block:: JSON
-
-   {
-      "biography": "WE ARE VENOM",
-      "alias": "Venom",
-      "name": "Eddie Brock"
-   }
-
 Response:
 
 .. code-block:: JSON
@@ -895,14 +820,6 @@ JSON Body:
 | biography             | no         |
 +-----------------------+------------+
 
-.. code-block:: JSON
-
-   {
-      "name": "Peter Parker",
-      "biography": "This is a new bio",
-      "alias": "Spider-Man"
-   }
-
 Response:
 
 .. code-block:: JSON
@@ -916,6 +833,190 @@ Response:
       "date_created": "2022-01-31T20:08:07.926194Z"
    }
 
+Staff
+-----
+
+Get staff
+#####
+
+**GET** https://staging-kaboom.herokuapp.com/v1/comics/staff/
+
+Query params:
+
++------------+--------------+------------+-----------+
+| Name       | Example      | Type       | Required  |
++============+==============+============+===========+
+| query      | john doe     | str        | no        |
++------------+--------------+------------+-----------+
+| position * | penciller    | str        | no        |
++------------+--------------+------------+-----------+
+| page **    | 1            | int        | no        |
++------------+--------------+------------+-----------+
+
+* to see a list of possible positions go to [TODO: Insert link]
+** pagination purposes
+
+Response:
+
+.. code-block:: JSON
+
+   {
+      "count": 2,
+      "next": null,
+      "previous": null,
+      "results": [
+         {
+            "id": 2,
+            "position": {
+               "id": 8,
+               "position": "Designer"
+            },
+            "name": "James Halliday",
+            "image": "",
+            "date_of_birth": "1972-06-12",
+            "date_of_death": "2039-04-15",
+            "age": 66,
+            "biography": "",
+            "date_created": "2022-01-29T14:37:05.876780Z"
+         },
+         {
+            "id": 1,
+            "position": {
+               "id": 2,
+               "position": "Penciller"
+            },
+            "name": "John Doe",
+            "image": "",
+            "date_of_birth": "1988-11-10",
+            "date_of_death": "2005-04-15",
+            "age": 16,
+            "biography": "Best penciller in the world",
+            "date_created": "2022-01-29T14:25:18.610113Z"
+         }
+      ]
+   }
+
+Add staff 🔒
+#####
+
+**POST** https://staging-kaboom.herokuapp.com/v1/comics/staff/
+
+Headers: 
+
++---------------+-------------------------+------------+
+| Name          | Value                   | Required   |
++===============+=========================+============+
+| Authorization | Token user_access_token | yes        |
++---------------+-------------------------+------------+
+
+JSON Body:
+
++-----------------------+------------+
+| Name                  | Type       |
++=======================+============+
+| name                  | str        |
++-----------------------+------------+
+| position              | int        |
++-----------------------+------------+
+| date_of_birth         | date       |
++-----------------------+------------+
+| date_of_death         | date       |
++-----------------------+------------+
+| biography             | str        |
++-----------------------+------------+
+
+Staff age is calculated server side so is not needed.
+
+Response:
+
+.. code-block:: JSON
+
+   {
+      "id": 3,
+      "position": {
+         "id": 8,
+         "position": "Designer"
+      },
+      "name": "James Halliday",
+      "image": "",
+      "date_of_birth": "1972-06-12",
+      "date_of_death": "2039-04-15",
+      "age": 66,
+      "biography": "",
+      "date_created": "2022-01-31T20:18:41.707870Z"
+   }
+
+Get specific staff
+#####
+
+**GET** https://staging-kaboom.herokuapp.com/v1/comics/staff/{staff_id}/
+
+Response:
+
+.. code-block:: JSON
+
+   {
+      "id": 1,
+      "position": {
+         "id": 2,
+         "position": "Penciller"
+      },
+      "name": "John Doe",
+      "image": "",
+      "date_of_birth": "1988-11-10",
+      "date_of_death": "2005-04-15",
+      "age": 16,
+      "biography": "Best penciller in the world",
+      "date_created": "2022-01-29T14:25:18.610113Z"
+   }
+
+Update specific staff 🔒
+#####
+
+**PATCH** https://staging-kaboom.herokuapp.com/v1/comics/staff/{staff_id}/
+
+Headers: 
+
++---------------+-------------------------+------------+
+| Name          | Value                   | Required   |
++===============+=========================+============+
+| Authorization | Token user_access_token | yes        |
++---------------+-------------------------+------------+
+
+JSON Body:
+
++-----------------------+------------+
+| Name                  | Type       |
++=======================+============+
+| name                  | str        |
++-----------------------+------------+
+| position              | int        |
++-----------------------+------------+
+| date_of_birth         | date       |
++-----------------------+------------+
+| date_of_death         | date       |
++-----------------------+------------+
+| biography             | str        |
++-----------------------+------------+
+
+Response:
+
+.. code-block:: JSON
+
+   {
+      "id": 1,
+      "position": {
+         "id": 2,
+         "position": "Penciller"
+      },
+      "name": "John Doe",
+      "image": "",
+      "date_of_birth": "1988-11-10",
+      "date_of_death": "2006-04-15",
+      "age": 17,
+      "biography": "Best penciller in the world",
+      "date_created": "2022-01-31T20:24:36.930494Z"
+   }
 
 .. autosummary::
    :toctree: generated
