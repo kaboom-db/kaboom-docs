@@ -1107,6 +1107,59 @@ Response:
       "position": "Writer"
    }
 
+Formats
+-----
+
+The database holds a list of formats an issue can be.
+Just like staff positions, if you want to filter all issues by format, you would send the format id in the query params.
+
+Get all formats
+#####
+
+**GET** https://staging-kaboom.herokuapp.com/v1/comics/formats/
+
+Query params:
+
++------------+--------------+------------+-----------+
+| Name       | Example      | Type       | Required  |
++============+==============+============+===========+
+| name       | comic        | str        | no        |
++------------+--------------+------------+-----------+
+| page *     | 1            | int        | no        |
++------------+--------------+------------+-----------+
+
+* pagination purposes
+
+Response:
+
+.. code-block:: JSON
+
+   {
+      "count": 1,
+      "next": null,
+      "previous": null,
+      "results": [
+         {
+            "id": 1,
+            "name": "Comic"
+         }
+      ]
+   }
+
+Get specific format
+#####
+
+**GET** https://staging-kaboom.herokuapp.com/v1/comics/formats/{format_id}/
+
+Response:
+
+.. code-block:: JSON
+
+   {
+      "id": 1,
+      "name": "Comic"
+   }
+
 .. autosummary::
    :toctree: generated
 
