@@ -742,6 +742,181 @@ Response:
       "date_created": "2022-01-23T14:38:27.574581Z"
    }
 
+Comic Characters
+-----
+
+Get characters
+#####
+
+**GET** https://staging-kaboom.herokuapp.com/v1/comics/characters/
+
+Query params:
+
++------------+--------------+------------+-----------+
+| Name       | Example      | Type       | Required  |
++============+==============+============+===========+
+| query      | bruce banner | str        | no        |
++------------+--------------+------------+-----------+
+| page *     | 1            | int        | no        |
++------------+--------------+------------+-----------+
+
+* pagination purposes
+
+Response:
+
+.. code-block:: JSON
+
+   {
+      "count": 4,
+      "next": null,
+      "previous": null,
+      "results": [
+         {
+            "id": 3,
+            "name": "Bruce Banner",
+            "alias": "Hulk",
+            "image": "",
+            "biography": "Hulk Smash!",
+            "date_created": "2022-01-29T14:39:53.556135Z"
+         },
+         {
+            "id": 1,
+            "name": "John Doe",
+            "alias": "Cool Man",
+            "image": "",
+            "biography": "Such a cool character tbf",
+            "date_created": "2022-01-29T14:37:24.773218Z"
+         },
+         {
+            "id": 2,
+            "name": "Peter Parker",
+            "alias": "Spider-Man",
+            "image": "",
+            "biography": "With great power comes great responsibility",
+            "date_created": "2022-01-29T14:40:12.014926Z"
+         },
+         {
+            "id": 4,
+            "name": "Steve Rogers",
+            "alias": "Captain America",
+            "image": "",
+            "biography": "American guy",
+            "date_created": "2022-01-29T14:40:51.666606Z"
+         }
+      ]
+   }
+
+Add character 🔒
+#####
+
+**POST** https://staging-kaboom.herokuapp.com/v1/comics/characters/
+
+Headers: 
+
++---------------+-------------------------+------------+
+| Name          | Value                   | Required   |
++===============+=========================+============+
+| Authorization | Token user_access_token | yes        |
++---------------+-------------------------+------------+
+
+JSON Body:
+
++-----------------------+------------+
+| Name                  | Required   |
++=======================+============+
+| name                  | yes        |
++-----------------------+------------+
+| alias                 | no         |
++-----------------------+------------+
+| biography             | no         |
++-----------------------+------------+
+
+.. code-block:: JSON
+
+   {
+      "biography": "WE ARE VENOM",
+      "alias": "Venom",
+      "name": "Eddie Brock"
+   }
+
+Response:
+
+.. code-block:: JSON
+
+   {
+      "id": 5,
+      "name": "Eddie Brock",
+      "alias": "Venom",
+      "image": "",
+      "biography": "WE ARE VENOM",
+      "date_created": "2022-01-31T20:04:56.025351Z"
+   }
+
+Get specific character
+#####
+
+**GET** https://staging-kaboom.herokuapp.com/v1/comics/characters/{character_id}/
+
+Response:
+
+.. code-block:: JSON
+
+   {
+      "id": 2,
+      "name": "Peter Parker",
+      "alias": "Spider-Man",
+      "image": "",
+      "biography": "With great power comes great responsibility",
+      "date_created": "2022-01-29T14:40:12.014926Z"
+   }
+
+Update specific character 🔒
+#####
+
+**PATCH** https://staging-kaboom.herokuapp.com/v1/comics/characters/{character_id}/
+
+Headers: 
+
++---------------+-------------------------+------------+
+| Name          | Value                   | Required   |
++===============+=========================+============+
+| Authorization | Token user_access_token | yes        |
++---------------+-------------------------+------------+
+
+JSON Body:
+
++-----------------------+------------+
+| Name                  | Required   |
++=======================+============+
+| name                  | no         |
++-----------------------+------------+
+| alias                 | no         |
++-----------------------+------------+
+| biography             | no         |
++-----------------------+------------+
+
+.. code-block:: JSON
+
+   {
+      "name": "Peter Parker",
+      "biography": "This is a new bio",
+      "alias": "Spider-Man"
+   }
+
+Response:
+
+.. code-block:: JSON
+
+   {
+      "id": 2,
+      "name": "Peter Parker",
+      "alias": "Spider-Man",
+      "image": "",
+      "biography": "This is a new bio",
+      "date_created": "2022-01-31T20:08:07.926194Z"
+   }
+
+
 .. autosummary::
    :toctree: generated
 

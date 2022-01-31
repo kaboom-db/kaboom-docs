@@ -156,3 +156,5 @@ cython_debug/
 # End of https://www.toptal.com/developers/gitignore/api/python,jupyternotebooks
 
 docs/source/getting-started-bck.rst
+
+docs/source/temp.rst
