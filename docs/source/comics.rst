@@ -1018,6 +1018,95 @@ Response:
       "date_created": "2022-01-31T20:24:36.930494Z"
    }
 
+Staff Positions
+-----
+
+The database holds specific staff positions to use when making requests.
+If you're filtering to get all staff of a specific position, you would send the position id.
+
+Get all staff positions
+#####
+
+**GET** https://staging-kaboom.herokuapp.com/v1/comics/staffpositions/
+
+Query params:
+
++------------+--------------+------------+-----------+
+| Name       | Example      | Type       | Required  |
++============+==============+============+===========+
+| position   | penciller    | str        | no        |
++------------+--------------+------------+-----------+
+| page *     | 1            | int        | no        |
++------------+--------------+------------+-----------+
+
+* pagination purposes
+
+Response:
+
+.. code-block:: JSON
+
+   {
+      "count": 11,
+      "next": "http://staging-kaboom.herokuapp.com/v1/comics/staffpositions/?page=2",
+      "previous": null,
+      "results": [
+         {
+            "id": 1,
+            "position": "Writer"
+         },
+         {
+            "id": 2,
+            "position": "Penciller"
+         },
+         {
+            "id": 3,
+            "position": "Cover Artist"
+         },
+         {
+            "id": 4,
+            "position": "Inker"
+         },
+         {
+            "id": 5,
+            "position": "Variant Cover Artist"
+         },
+         {
+            "id": 6,
+            "position": "Colorist"
+         },
+         {
+            "id": 7,
+            "position": "Letterer"
+         },
+         {
+            "id": 8,
+            "position": "Designer"
+         },
+         {
+            "id": 9,
+            "position": "Editor"
+         },
+         {
+            "id": 10,
+            "position": "Executive Editor"
+         }
+      ]
+   }
+
+Get specific staff position
+#####
+
+**GET** https://staging-kaboom.herokuapp.com/v1/comics/staffpositions/{position_id}/
+
+Response:
+
+.. code-block:: JSON
+
+   {
+      "id": 1,
+      "position": "Writer"
+   }
+
 .. autosummary::
    :toctree: generated
 
