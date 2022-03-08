@@ -6,25 +6,31 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: #FF5F6D;
+  --ifm-color-primary-dark: #fa4a58;
+  --ifm-color-primary-darker: #ee3746;
+  --ifm-color-primary-darkest: #db2b39;
+  --ifm-color-primary-light: #FFC371;
+  --ifm-color-primary-lighter: #fcc77e;
+  --ifm-color-primary-lightest: #fcce8e;
+  --ifm-color-info-dark: var(--ifm-color-primary-dark);
+  --ifm-color-info-darker: var(--ifm-color-primary-darker);
+  --ifm-color-info-darkest: var(--ifm-color-primary-darkest);
   --ifm-code-font-size: 95%;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 html[data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --ifm-color-primary: #ff5f6d;
+  --ifm-color-primary-dark: #fa4a58;
+  --ifm-color-primary-darker: #ee3746;
+  --ifm-color-primary-darkest: #db2b39;
+  --ifm-color-primary-light: #FFC371;
+  --ifm-color-primary-lighter: #fcc77e;
+  --ifm-color-primary-lightest: #fcce8e;
+  --ifm-color-info-dark: var(--ifm-color-primary-dark);
+  --ifm-color-info-darker: var(--ifm-color-primary-darker);
+  --ifm-color-info-darkest: var(--ifm-color-primary-darkest);
 }
 
 .docusaurus-highlight-code-line {
@@ -36,4 +42,17 @@ html[data-theme='dark'] {
 
 html[data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+::selection {
+  background-color: var(--ifm-color-primary);
+  color: black;
+}
+
+details {
+  background-color: rgba(255, 95, 109, 0.3) !important;
+}
+
+table td {
+  background-color: rgba(255, 95, 109, 0.3) !important;
 }
