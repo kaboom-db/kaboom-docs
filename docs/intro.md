@@ -6,7 +6,7 @@ sidebar_position: 1
 
 ## What is Kaboom?
 
-Kaboom is a service for tracking comics and cartoons, with an API to retrieve and add data. As of right now, Kaboom is just a backend, and the [website](https://github.com) does not provide a frontend to interface with the service *yet*. This is why Kaboom needs frontend clients, for users to access the service.
+Kaboom is a service for tracking comics and cartoons, with an API to retrieve and add data. As of right now, Kaboom is just a hobby project, and won't be deployed until I have sufficient experience in cloud services.
 
 Before starting, please read the [Developer Guidlines](https://github.com/kaboom-db/kaboom-api/blob/master/DEV_GUIDELINES.md).
 
