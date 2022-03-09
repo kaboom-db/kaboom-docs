@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 # Characters
@@ -95,8 +95,8 @@ Although characters are part of the cartoons endpoint, they are also applied to 
 
 </details>
 
-<details id="add-characters">
-  <summary>Add characters 🔒</summary>
+<details id="add-character">
+  <summary>Add character 🔒</summary>
 
 **POST** `https://staging-kaboom.herokuapp.com/v1/cartoons/characters/`
 
