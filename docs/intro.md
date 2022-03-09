@@ -20,4 +20,4 @@ All **POST** and **PATCH** requests must be sent with a trailing / at the end of
 
 Any data uploaded to the staging database does not persist and will be refreshed frequently.
 
-Note that all endpoints marked with 🔒 require a user to be logged in.
+Note: All endpoints marked with 🔒 require a user to be logged in. Data in JSON response is all test data and should not be expected in actual results.
