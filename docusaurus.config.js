@@ -55,7 +55,7 @@ const config = {
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/kaboom-db/kaboom-api',
+            href: 'https://github.com/kaboom-db',
             label: 'GitHub',
             position: 'right',
           },
@@ -77,17 +77,9 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
+                label: 'Discussions',
+                href: 'https://github.com/kaboom-db/kaboom-api/discussions',
+              }
             ],
           },
           {
@@ -99,7 +91,7 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/kaboom-db',
               },
             ],
           },

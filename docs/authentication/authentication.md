@@ -1,5 +1,7 @@
 # Authentication
 
+## Overview
+
 If you want to use the API to `GET` data from the database, you won't need to authenticate (log in). However all `POST` and `PATCH` requests sent to the `comics`
 and `cartoons` endpoint require a user to be logged in, and so do ALL requests sent to the `accounts` endpoint.
 
