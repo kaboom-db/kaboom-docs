@@ -4,6 +4,8 @@ sidebar_position: 6
 
 # Teams
 
+Although teams are part of the cartoons endpoint, they apply to comics too.
+
 <details id="get-teams">
   <summary>Get teams</summary>
 
