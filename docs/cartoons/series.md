@@ -9,7 +9,7 @@ A series in this context is a collection of episodes, typically released on a we
 <details id="get-series">
   <summary>Get series</summary>
 
-**GET** `https://staging-kaboom.herokuapp.com/v1/cartoonss/series/`
+**GET** `https://staging-kaboom.herokuapp.com/v1/cartoons/series/`
 
 **Query params:**
 
