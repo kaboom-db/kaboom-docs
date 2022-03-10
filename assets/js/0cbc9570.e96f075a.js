@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkkaboom_docs=self.webpackChunkkaboom_docs||[]).push([[9263],{1957:function(o){o.exports=JSON.parse('{"permalink":"/kaboom-docs/blog/tags/facebook","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"previousPage":null,"nextPage":null,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
