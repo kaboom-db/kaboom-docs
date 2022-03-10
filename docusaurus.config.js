@@ -12,8 +12,9 @@ const config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'kaboomdb', // Usually your GitHub org/user name.
+  projectName: 'kaboom-docs', // Usually your repo name.
+  trailingSlash: false,
 
   presets: [
     [
