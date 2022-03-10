@@ -8,7 +8,7 @@ const FeatureList = [
     Svg: require('../../static/img/accounts.svg').default,
     description: (
       <>
-        <a href='/docs/authentication/' className='button button--primary'>Authenticate a user</a>
+        <a href='docs/authentication/' className='button button--primary'>Authenticate a user</a>
       </>
     ),
   },
@@ -17,7 +17,7 @@ const FeatureList = [
     Svg: require('../../static/img/comics.svg').default,
     description: (
       <>
-        <a href='/docs/comics/series' className='button button--primary'>Access comic data</a>
+        <a href='docs/comics/series' className='button button--primary'>Access comic data</a>
       </>
     ),
   },
@@ -26,7 +26,7 @@ const FeatureList = [
     Svg: require('../../static/img/cartoons.svg').default,
     description: (
       <>
-        <a href='/docs/cartoons/series' className='button button--primary'>Access cartoon data</a>
+        <a href='docs/cartoons/series' className='button button--primary'>Access cartoon data</a>
       </>
     ),
   },
