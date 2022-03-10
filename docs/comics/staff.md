@@ -18,6 +18,7 @@ sidebar_position: 4
 | page **    | 1            | int        | no        |
 
 \* to see a list of possible positions go [here](/docs/comics/staff-positions)
+
 \*\* pagination purposes
 
 **Response:**

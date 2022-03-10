@@ -23,7 +23,7 @@ The Kaboom user feed is a bit limited. By passing a "feed type", you can get a l
 
 \* pagination purposes
 
-If no type is given, it will default to 'thought'. Have a look at the extra info section to see what feed types are possible.
+If no type is given, it will default to 'thought'. Have a look at the extra information section to see what feed types are possible.
 
 **Response:**
 

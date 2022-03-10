@@ -115,7 +115,7 @@ The biography field supports markdown. Note that some markdown elements may not 
 | object_id                | yes        |
 | image **                 | yes        |
 
-\* fields are string options. Have a look at EXTRA to see what values are valid.
+\* fields are string options. Have a look at the extra information section to see what values are valid.
 
 \*\* sent as a file.
 
@@ -150,7 +150,7 @@ Some records may need to be reported for violating rules, etc. These only really
 | object_id                | yes        |
 | message                  | yes        |
 
-\* fields are string options. Have a look at EXTRA to see what values are valid.
+\* fields are string options. Have a look at the extra information section to see what values are valid.
 
 **Response:**
 
