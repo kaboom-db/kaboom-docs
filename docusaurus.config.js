@@ -8,7 +8,7 @@ const config = {
   title: 'Kaboom Documentation',
   tagline: 'Documentation for the Kaboom API',
   url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
+  baseUrl: '/kaboom-docs/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
