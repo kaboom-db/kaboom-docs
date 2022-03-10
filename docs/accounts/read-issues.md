@@ -154,7 +154,7 @@ sidebar_position: 3
 | issue                    | yes        |
 | read_at *                | no         |
 
-* read_at will default to the current time of the request, so is not needed.
+\* read_at will default to the current time of the request, so is not needed.
 
 **Response:**
 

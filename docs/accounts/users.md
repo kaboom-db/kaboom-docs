@@ -4,8 +4,6 @@ sidebar_position: 1
 
 # Users
 
-This section refers to the accounts functionality of Kaboom. Most endpoints here are auth required.
-
 <details id="get-users">
   <summary>Get users 🔒</summary>
 
