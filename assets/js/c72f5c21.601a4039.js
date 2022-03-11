@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkkaboom_docs=self.webpackChunkkaboom_docs||[]).push([[6570],{2228:function(o){o.exports=JSON.parse('{"permalink":"/kaboom-docs/blog/tags/hello","page":1,"postsPerPage":10,"totalPages":1,"totalCount":2,"previousPage":null,"nextPage":null,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

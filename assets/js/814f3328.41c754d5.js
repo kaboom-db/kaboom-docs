@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkkaboom_docs=self.webpackChunkkaboom_docs||[]).push([[2535],{5641:function(o){o.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"How to self host Kaboom","permalink":"/kaboom-docs/blog/self-host-kaboom"}]}')}}]);
