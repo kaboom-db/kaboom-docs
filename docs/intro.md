@@ -14,7 +14,7 @@ Before starting, please read the [Developer Guidlines](https://github.com/kaboom
 
 If you want to make a client for Kaboom but don't want to go through the hassle of self hosting it, you can use the demo/staging server located here: https://staging-kaboom.herokuapp.com/v1
 
-You can also download the Postman collection here, which is pre-configured with the staging url and a demo user access token: https://github.com/crxssed7/kaboom-api/blob/master/KABOOM.postman_collection.json
+You can also download the [Postman collection](https://github.com/crxssed7/kaboom-api/blob/master/KABOOM.postman_collection.json), which is pre-configured with the staging url and a demo user access token.
 
 All **POST** and **PATCH** requests must be sent with a trailing / at the end of the URL.
 
