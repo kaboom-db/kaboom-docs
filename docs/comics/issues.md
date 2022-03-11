@@ -15,6 +15,9 @@ sidebar_position: 2
 |-----------------------|------------|------------|-----------|
 | series                | 1          | int        | no        |
 | issue_number_absolute | 1          | int        | no        |
+| issue_name            |            | str        | no        |
+| release_date_before   |            | date       | no        |
+| release_date_after    |            | date       | no        |
 | page *                | 1          | int        | no        |
 
 \* pagination purposes

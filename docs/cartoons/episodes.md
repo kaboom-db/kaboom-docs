@@ -11,14 +11,15 @@ sidebar_position: 2
 
 **Query params:**
 
-| Name           | Value      | Type       | Required  |
-|----------------|------------|------------|-----------|
-| query          | the power  | str        | no        |
-| series         | 43         | int        | no        |
-| release_date   |            | datetime   | no        |
-| season_number  | 1          | datetime   | no        |
-| episode_number | 1          | datetime   | no        |
-| page *         | 1          | int        | no        |
+| Name                | Value      | Type       | Required  |
+|---------------------|------------|------------|-----------|
+| query               | the power  | str        | no        |
+| series              | 43         | int        | no        |
+| release_date_before |            | date       | no        |
+| release_date_after  |            | date       | no        |
+| season_number       | 1          | int        | no        |
+| episode_number      | 1          | int        | no        |
+| page *              | 1          | int        | no        |
 
 \* pagination purposes
 
