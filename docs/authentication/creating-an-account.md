@@ -12,20 +12,21 @@ You also need to send the users credentials as part of the JSON body, like this:
 
 ```json
 {
-    "username": "testUser",
-    "password": "super_strong_password",
-    "email": "email@kaboom.com"
+  "username": "testUser",
+  "password": "super_strong_password",
+  "email": "email@kaboom.com"
 }
 ```
 
 All fields in the above JSON snippet are required.
 
-If the request is valid, the server will respond with a 200 status code and a JSON string:
+If the request is valid, the server will respond with a 201 status code and a JSON string:
 
 ```json
 {
-    "user_id": 4,
-    "username": "testUser"
+  "user_id": 4,
+  "username": "testUser",
+  "token": "aabbccggeeffgghhiijjkkllmmnnooppqqrrsstt"
 }
 ```
 
