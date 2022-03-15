@@ -132,7 +132,7 @@ sidebar_position: 2
 | name                     | yes        |
 | summary                  | no         |
 | release_date             | no         |
-| runtime                  | no         |
+| runtime                  | yes        |
 
 **Response:**
 
