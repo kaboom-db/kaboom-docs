@@ -13,7 +13,7 @@ sidebar_position: 8
 
 | Name           | Value           | Type       | Required  |
 |----------------|-----------------|------------|-----------|
-| city           | animation       | str        | no        |
+| genre          | animation       | str        | no        |
 
 \* pagination purposes
 
