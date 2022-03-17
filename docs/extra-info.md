@@ -87,3 +87,15 @@ A characters alignment is limited to:
 - EVIL
 
 </details>
+
+<details>
+    <summary><b>Feed Types</b></summary>
+
+You can generate a feed with these given types:
+- comic
+- issue
+- cartoon
+- episode
+- thought
+
+</details>
