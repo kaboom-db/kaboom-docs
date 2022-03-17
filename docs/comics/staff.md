@@ -76,13 +76,13 @@ sidebar_position: 4
 
 **JSON Body:**
 
-| Name                  | Type       |
+| Name                  | Required   |
 |-----------------------|------------|
-| name                  | str        |
-| position              | int        |
-| date_of_birth         | date       |
-| date_of_death         | date       |
-| biography             | str        |
+| name                  | yes        |
+| position              | no         |
+| date_of_birth         | no         |
+| date_of_death         | no         |
+| biography             | no         |
 
 Staff age is calculated server side so is not needed.
 
@@ -146,13 +146,13 @@ Staff age is calculated server side so is not needed.
 
 **JSON Body:**
 
-| Name                  | Type       |
+| Name                  | Required   |
 |-----------------------|------------|
-| name                  | str        |
-| position              | int        |
-| date_of_birth         | date       |
-| date_of_death         | date       |
-| biography             | str        |
+| name                  | no         |
+| position              | no         |
+| date_of_birth         | no         |
+| date_of_death         | no         |
+| biography             | no         |
 
 **Response:**
 
