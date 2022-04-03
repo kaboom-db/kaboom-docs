@@ -60,6 +60,7 @@ Although teams are part of the cartoons endpoint, they apply to comics too.
 | name                     | yes        |
 | tagline                  | no         |
 | disbanded                | no         |
+| disbanded_label          | no         |
 | history                  | no         |
 
 **Response:**
@@ -117,6 +118,7 @@ Although teams are part of the cartoons endpoint, they apply to comics too.
 | name                     | no         |
 | tagline                  | no         |
 | disbanded                | no         |
+| disbanded_label          | no         |
 | history                  | no         |
 
 **Response:**
