@@ -19,6 +19,8 @@ A series in this context is a collection of episodes, typically released on a we
 | genre      | animation  | str        | no        |
 | status     | completed  | str options| no        |
 | network    | 1          | int        | no        |
+| tmdb_id    |            | int        | no        |
+| imdb_id    |            | str        | no        |
 | page *     | 1          | int        | no        |
 
 \* pagination purposes
